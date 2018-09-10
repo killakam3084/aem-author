@@ -1,5 +1,5 @@
 # DOCKER-VERSION 1.0.1
-FROM iillmaticc/aem-base-jre-8
+FROM iillmaticc/aem-base
 MAINTAINER iillmaticc 
 
 # Pulling this from remote quantumdownloads is slow
