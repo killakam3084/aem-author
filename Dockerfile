@@ -10,12 +10,11 @@ ONBUILD ADD license.properties /aem/license.properties
 ONBUILD WORKDIR /aem
 ONBUILD RUN java -Xmx2048M -jar cq-6.2.jar -unpack -r author -p 4502 
 
+# Add .zip(s) to install post unpacking
+ONBUILD ADD acs-aem-commons-content-3.2.6.zip /aem/crx-quickstart/install/acs-aem-commons-content-3.2.6.zip
+
 # Installs AEM
 ONBUILD RUN python aemInstaller.py -i cq-6.2.jar -r author -p 4502
-
-#Replaces the port within the quickstart file with the standard publish port
-#ONBUILD RUN cp quickstart quickstart.original
-#ONBUILD RUN cat quickstart.original | sed "s|4502|4503|g" > quickstart
 
 
 EXPOSE 4502 8000
