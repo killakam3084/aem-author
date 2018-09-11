@@ -17,6 +17,10 @@ ONBUILD RUN python aemInstaller.py -i cq-6.2.jar -r author -p 4502
 # Add .zip(s) to install post unpacking
 ONBUILD RUN mkdir -p /aem/crx-quickstart/install
 ONBUILD ADD acs-aem-commons-content-3.2.6.zip /aem/crx-quickstart/install/acs-aem-commons-content-3.2.6.zip
+ONBUILD ADD AEM-6.2-Service-Pack-1-6.2.SP1.zip /aem/crx-quickstart/install/AEM-6.2-Service-Pack-1-6.2.SP1.zip
+ONBUILD ADD cq-6.2.0-hotfix-14163-1.0.zip /aem/crx-quickstart/install/cq-6.2.0-hotfix-14163-1.0.zip
+
+
 
 EXPOSE 4502 8000
 ENTRYPOINT ["/aem/crx-quickstart/bin/quickstart"]
