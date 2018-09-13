@@ -3,7 +3,7 @@ This Docker image installs Adobe Experience Manager 6.2, and allows it
 to be run within a Docker container.
 
 # About docker-aem-author
->*You must have a copy of the AEM 6 installation Media for this to work
+>*You must have a copy of the AEM 6.2 installation Media for this to work
 
 You must copy your AEM installation media into the base directory before
 running this image. The image expects the following files within the base directory:
